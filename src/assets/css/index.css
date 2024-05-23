@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+.d-f-center {
+  display: flex;
+  align-items: center;
+}
+.d-f-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+button {
+  height: 45px;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+button:hover {
+  opacity: 0.8;
+}
+:focus,
+:active {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+a,
+a:active,
+a:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --blue: #3b75f3;
+}

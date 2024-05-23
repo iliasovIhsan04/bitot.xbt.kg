@@ -1,0 +1,245 @@
+.header {
+  height: 80px;
+  border-bottom: 1px solid #b9b9b9;
+}
+.nav_page {
+  font-size: 16px;
+  font-weight: 500;
+  color: #131313;
+  position: relative;
+}
+.nav_page::after {
+  content: "";
+  position: absolute;
+  background: var(--blue);
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav_page:hover:after {
+  width: 100%;
+}
+.link-block {
+  margin-left: 70px;
+  gap: 50px;
+}
+.language_block {
+  width: 110px;
+  height: 45px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+.language_registr_block {
+  gap: 20px;
+}
+.login_btn {
+  color: #131313;
+  background: none;
+}
+.header .registr_btn {
+  background: var(--blue);
+  border-radius: 10px;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 1019px) {
+    display: none;
+  }
+}
+/* CryptoConversion */
+.crypto-conversion {
+  width: 100%;
+  height: 540px;
+  border-radius: 40px;
+  background-image: url("../../assets/img/fon1.svg");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0 0 0;
+}
+.conditions-conversion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+}
+.conditions-conversion h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.conditions-conversion p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.conditions-conversion button {
+  padding: 10px 20px;
+  color: #000000;
+  border-radius: 10px;
+  max-width: 160px;
+}
+.conversion-calc {
+  max-width: 448px;
+  height: 100%;
+  border-radius: 18px;
+  margin-left: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.sel-buy-party {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to right, #b0ddf3, #fbc2fc);
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
+.sel-buy-party img {
+  margin-left: 16px;
+}
+.sel-buy-party h2,
+.sel-buy-party span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #131313;
+}
+.sel-buy-party h2 {
+  font-weight: 600;
+}
+.conversion-calc-really {
+  padding: 0 20px 20px 20px;
+}
+.conversion-buy-active {
+  width: 100%;
+  height: 45px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 0 20px 0;
+}
+.conversion-buy-active .active {
+  background-color: #1856cd1a;
+  opacity: 0.8;
+  color: #3b75f3 !important;
+  font-weight: 500;
+  border: 2px solid #3b75f3;
+}
+.conversion-buy-active div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.give-it-away-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.give-it-away-block label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #131313;
+}
+.input_box {
+  width: 100%;
+  height: 90px;
+  background: #f5f7fa;
+  padding: 10px;
+  border-radius: 14px;
+  margin-top: 5px;
+  gap: 20px;
+}
+.input_box input {
+  width: 60%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  font-weight: 600;
+}
+.input_box input::placeholder {
+  font-size: 22px;
+  font-weight: 600;
+  color: #b9b9b9;
+}
+.buy-btn {
+  width: 90%;
+  background: var(--blue);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+.buy-btn:hover {
+  opacity: 0.8;
+}
+.crypto-select {
+  width: 145px;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+.slider-block {
+  margin: 90px 0 0 0;
+}
+.slider-index {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: none !important;
+  background-color: blanchedalmond;
+  gap: 20px;
+}
+.slider-index img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  gap: 20px;
+}
+.slick-track {
+  display: flex !important;
+  gap: 20px;
+}
+
+/* PopularCrypto */
+.popular-crypto-currencies {
+  margin: 200px 0 0 0;
+}
+.popular-crypto-currencies h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #131313;
+  text-align: center;
+}
+.popular-crypto-header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.popular-crypto-header p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #131313;
+}
