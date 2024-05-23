@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "../assets/css/app.css";
 import logo from "../assets/img/bitokLogo.svg";
 import { NavLink } from "react-router-dom";
+import Language from "./Main/Language";
+import { t } from "i18next";
 
 const Header = () => {
-  const [active, setActive] = useState(false);
   return (
     <div className="header d-f-center">
       <div className="container">
@@ -15,18 +16,20 @@ const Header = () => {
             </NavLink>
             <div className="link-block d-f-center">
               <NavLink className="nav_page" to="/about">
-                О компании
+                {t("about")}
               </NavLink>
               <NavLink className="nav_page" to="/news">
                 Новости
               </NavLink>
               <NavLink className="nav_page" to="/contacts">
-                Контакты
+                {t("contacts")}
               </NavLink>
             </div>
           </div>
           <div className="language_registr_block d-f-center">
-            <div className="language_block"></div>
+            <div className="language_block">
+              <Language />
+            </div>
             <button className="login_btn">Войти</button>
             <button className="registr_btn">Зарегистрироваться</button>
           </div>
