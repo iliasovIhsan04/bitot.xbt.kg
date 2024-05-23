@@ -30,6 +30,18 @@ button {
 button:hover {
   opacity: 0.8;
 }
+.btn-crypto-all {
+  background: none;
+  border: 1px solid #3b75f3;
+  color: #3b75f3;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.btn-crypto-all:hover {
+  background: #3b75f3;
+  color: #fff;
+  transition: all 0.3s ease-in-out 0s;
+}
 :focus,
 :active {
   outline: none;
