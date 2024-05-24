@@ -36,6 +36,9 @@ button:hover {
   color: #3b75f3;
   border-radius: 8px;
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-crypto-all:hover {
   background: #3b75f3;

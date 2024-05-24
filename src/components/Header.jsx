@@ -27,9 +27,7 @@ const Header = () => {
             </div>
           </div>
           <div className="language_registr_block d-f-center">
-            <div className="language_block">
               <Language />
-            </div>
             <button className="login_btn">Войти</button>
             <button className="registr_btn">Зарегистрироваться</button>
           </div>

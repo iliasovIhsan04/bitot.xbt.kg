@@ -64,14 +64,18 @@ const Language = () => {
       width={110}
       height={45}
       borderRadius={2}
-      sx={{ background: "#F5F5F5", position: "relative" }}
+      sx={{
+        background: "#F5F5F5",
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+      }}
       className="center"
     >
       <MenuItem
         aria-label="change langauge"
         size="small"
-        color="#3698D4"
-        style={{ gap: "10px", width: "100px" }}
+        color="#3698="
         onClick={() => {
           document.body.classList.add("scrolled-body");
           setOpen(!open);
@@ -90,14 +94,7 @@ const Language = () => {
         <Typography variant="p" fontSize={16}>
           {i18n.resolvedLanguage === "en" ? "Eng" : "Рус"}
         </Typography>
-        <IoIosArrowDown
-          style={{
-            position: "relative",
-            zIndex: "99",
-          }}
-          color="#000"
-          size={45}
-        />
+        <IoIosArrowDown color="#000" size={32} />
       </MenuItem>
       <Slide direction="down" in={open} container={containerRef.current}>
         {list}

@@ -69,13 +69,15 @@ const SliderCrypto = () => {
   ];
   return (
     <div className="slider-crypto">
-      <Slider className="slider-block" {...settings}>
-        {data.map((el, id) => (
-          <div className="slider-index" key={id}>
-            <img src={el.img} alt="" />
-          </div>
-        ))}
-      </Slider>
+      <div className="container">
+        <Slider className="slider-block" {...settings}>
+          {data.map((el, id) => (
+            <div className="slider-index" key={id}>
+              <img src={el.img} alt="" />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
