@@ -1,0 +1,111 @@
+@media (max-width: 576px) {
+  .conditions-conversion h1 {
+    font-size: 30px;
+  }
+  .conditions-conversion p {
+    font-size: 14px;
+  }
+  .sel-buy-party span {
+    font-size: 12px;
+  }
+  .sel-buy-party h2 {
+    font-size: 9px;
+  }
+  .popular-crypto-header p {
+    font-size: 16px;
+  }
+  .logo-block img,
+  .crypto-select img {
+    width: 30px;
+    height: 30px;
+  }
+  .input_box {
+    height: 80px;
+  }
+  .crypto-select {
+    min-width: 120px;
+    top: 14px;
+    gap: 8;
+  }
+  .calc-currency-text span {
+    font-size: 14px;
+  }
+  .calc-currency-text b {
+    font-size: 16px;
+  }
+  .conversion-buy-active {
+    height: 40px;
+  }
+  .conversion-buy-active div {
+    font-size: 14px;
+  }
+  .our-team-the-information-box p {
+    font-size: 16px;
+  }
+  .news h1,
+  .blur-text {
+    font-size: 34px;
+  }
+  .license_position {
+    left: 270px !important;
+    top: 180px !important;
+    backdrop-filter: blur(-9px);
+    z-index: 0;
+  }
+  .reliability_position {
+    top: 370px !important;
+    backdrop-filter: blur(-9px);
+    z-index: 0;
+    left: 20px;
+    height: 45px;
+  }
+  .mission {
+    position: relative;
+  }
+}
+@media (max-width: 513px) {
+  .reliability_position {
+    top: 415px !important;
+  }
+}
+@media (max-width: 480px) {
+  .license_position {
+    left: 230px !important;
+  }
+  .reliability_position {
+    left: 10px;
+    height: 45px;
+  }
+}
+@media (max-width: 428px) {
+  .reliability_position {
+    top: 465px !important;
+    left: 0;
+  }
+}
+@media (max-width: 420px) {
+  .license_position {
+    left: 180px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .license_position {
+    left: 160px !important;
+  }
+  .dollar_img::before {
+    top: 200px !important;
+  }
+}
+
+@media (max-width: 343px) {
+  .license_position {
+    left: 150px !important;
+  }
+  .reliability_position {
+    top: 515px !important;
+  }
+  .dollar_img::before {
+    top: 225px !important;
+  }
+}

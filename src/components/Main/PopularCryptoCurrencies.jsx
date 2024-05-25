@@ -26,14 +26,14 @@ const PopularCryptoCurrencies = () => {
       <div className="container">
         <h2>Популярные криптовалюты</h2>
         <div className="popular-crypto-header">
-          <p>Торговая пара</p>
-          <p>Цена</p>
-          <p>Объем 24ч (USDT)</p>
-          <p>Рынок</p>
+          <p className="popular-text1">Торговая пара</p>
+          <p className="popular-text2">Цена</p>
+          <p className="popular-text3">Объем 24ч (USDT)</p>
+          <p className="popular-text4">Рынок</p>
           <p className="action">Действие</p>
         </div>
         {data.map((el, id) => (
-          <div className="popular-crypto-header" key={id}>
+          <div className="popular-crypto-header popular-weight" key={id}>
             <div className="logo-block">
               <img src={el.logo} />
               <p className="title">{el.name}</p>

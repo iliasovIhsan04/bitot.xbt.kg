@@ -1,0 +1,23 @@
+@media only screen and (min-width: 576px) and (max-width: 1200px) {
+  .license_position,
+  .reliability_position {
+    display: none;
+  }
+  .bitcoin_img {
+    width: 250px;
+    height: 240px;
+    top: 70px;
+  }
+  .news h1 {
+    padding-top: 200px;
+  }
+  .dollar_img::before {
+    top: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news h1 {
+    padding-top: 260px;
+  }
+}

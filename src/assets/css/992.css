@@ -1,0 +1,40 @@
+@media (max-width: 1200px) {
+  .lan_block {
+    display: none;
+  }
+}
+@media (max-width: 993px) {
+  .crypto-conversion {
+    grid-template-columns: 1fr;
+  }
+  .header .registr_btn {
+    display: none;
+  }
+  .conversion-calc {
+    max-width: 100%;
+  }
+  .conditions-conversion button {
+    margin: 30px 0 40px 0;
+  }
+  .link-block,
+  .chart-block,
+  .popular-text4 {
+    display: none;
+  }
+  .container {
+    width: 80%;
+  }
+  .login_btn {
+    background: var(--blue);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    color: #ffff;
+    padding: 10px 20px;
+  }
+  .reliability_position {
+    top: 650px;
+  }
+  .dollar_img::before {
+    top: 420px;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/app.css";
+import "../assets/css/992.css";
 import logo from "../assets/img/bitokLogo.svg";
 import { NavLink } from "react-router-dom";
 import Language from "./Main/Language";
@@ -27,7 +28,9 @@ const Header = () => {
             </div>
           </div>
           <div className="language_registr_block d-f-center">
+            <div className="lan_block">
               <Language />
+            </div>
             <button className="login_btn">Войти</button>
             <button className="registr_btn">Зарегистрироваться</button>
           </div>

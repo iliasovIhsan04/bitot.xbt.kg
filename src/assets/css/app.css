@@ -44,18 +44,16 @@
   border-radius: 10px;
   padding: 0 20px;
   transition: all 0.3s ease-in-out;
-  @media screen and (max-width: 1019px) {
-    display: none;
-  }
 }
+
 /* CryptoConversion */
 .crypto-conversion {
   width: 100%;
-  height: 540px;
+  min-height: 540px;
   border-radius: 40px;
   background-image: url("../../assets/img/fon1.svg");
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 50%;
   background-size: cover;
   padding: 50px;
   display: grid;
@@ -286,6 +284,9 @@
   font-weight: 400;
   color: #131313;
 }
+.popular-weight p {
+  font-weight: 600;
+}
 .logo-block {
   display: flex;
   align-items: center;
@@ -319,6 +320,9 @@
 .our-team {
   width: 100%;
   margin-top: 270px;
+}
+.our-team-btn {
+  display: none;
 }
 .our-team-block {
   width: 100%;
@@ -397,14 +401,13 @@
 }
 
 /* News */
-
 .news {
   width: 100%;
   min-height: 1305px;
   border-radius: 40px;
   background-image: url("../img/fonNewsImg.svg");
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 50%;
   background-size: cover;
   margin: 200px 0 0 0;
 }
@@ -459,13 +462,13 @@
   line-height: 1.2;
   text-transform: uppercase;
 }
-.news h1 > span {
+.blur-text {
   font-size: 60px;
   color: #b0c9ff;
 }
 .reliability_position,
 .license_position {
-  max-width: 154px;
+  width: 154px;
   height: 40px;
   background: rgba(195, 214, 255, 0.3);
   backdrop-filter: blur(2px);

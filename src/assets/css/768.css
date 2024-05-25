@@ -1,0 +1,74 @@
+@media (max-width: 768px) {
+  .popular-text3,
+  .title-difference {
+    display: none;
+  }
+  .popular-crypto-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .conditions-conversion h1 {
+    font-size: 40px;
+  }
+  .sel-buy-party h2 {
+    font-size: 12px;
+  }
+  .popular-crypto-currencies h2 {
+    font-size: 22px;
+  }
+  .popular-crypto-currencies,
+  .our-team,
+  .news {
+    margin: 100px 0 0 0;
+  }
+  .news h1 {
+    font-size: 44px;
+    padding-top: 200px !important;
+    line-height: 1.4;
+  }
+  .bitcoin_img::before {
+    background-image: url("../img/b-img.svg");
+    top: -20px;
+    left: 0;
+  }
+  .dollar_img::before {
+    top: 180px !important;
+  }
+}
+@media (max-width: 668px) {
+  .trade-btn,
+  .action {
+    display: none;
+  }
+  .crypto-conversion {
+    padding: 16px 16px 36px 16px;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .our-team-block {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .our-team-block button {
+    display: none;
+  }
+  .our-team-btn {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+  .our-team-box p {
+    text-align: start;
+  }
+  .our-team-block h2 {
+    font-size: 22px;
+  }
+  .our-team-box {
+    display: flex;
+    align-items: flex-start;
+  }
+
+ 
+}

@@ -24,7 +24,8 @@ const News = () => {
           <div className="reliability_position">🔥 Надежность</div>
           <div className="license_position">Лицензия 💎</div>
           <h1>
-            Наша миссия - <br /> сделать цифровые <br /> <span>финансы </span>
+            Наша <span className="mission">миссия</span> - <br /> сделать цифровые <br />
+            <span className="blur-text">финансы </span>
             доступными
             <br /> и удобными
           </h1>

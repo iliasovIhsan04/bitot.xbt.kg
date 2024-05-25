@@ -41,6 +41,9 @@ const OurTeam = () => {
                 <div className="information-back-img information-box-img3"></div>
                 <p>Безопасность, защита финансовых данных</p>
               </div>
+              <button className="btn-crypto-all our-team-btn">
+                Подробнее <MdArrowOutward />
+              </button>
             </div>
           </div>
         </div>
