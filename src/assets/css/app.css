@@ -590,7 +590,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
-  width: 73%;
+  width: 33%;
 }
 #faq .btn {
   gap: 10px;
@@ -633,9 +633,6 @@
   padding: 0 20px;
   transition: background-color 0.3s ease;
   background-color: transparent;
-  @media screen and (max-width: 768px) {
-    font-size: 16px !important;
-  }
 }
 .question-content {
   color: #0f0f0f !important;
@@ -657,7 +654,6 @@
   transition: transform 0.3s ease;
   color: #141416 !important;
 }
-
 .arrow.active {
   transform: rotate(-180deg);
 }
@@ -666,7 +662,6 @@
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
-
 .answer-content {
   padding-bottom: 1rem;
   font-size: 16px;
@@ -674,31 +669,6 @@
   line-height: 1.1;
   color: #686868;
 }
-@media (max-width: 720px) {
-  #faq .questions__all {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  #faq .clients__questions {
-    width: 100%;
-  }
-  #faq .questions__faq button {
-    margin-top: 20px;
-  }
-  #faq .questions__faq {
-    display: flex;
-  }
-}
-@media (max-width: 500px) {
-  #faq .questions__all {
-    margin-top: -20px;
-  }
-  #faq .questions__faq button {
-    width: 100%;
-  }
-}
-
 /* Footer */
 .footer {
   width: 100%;
@@ -761,8 +731,8 @@
   color: #3b75f3;
 }
 .footer_categoris {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
   margin: 70px 0 0 120px;
 }
 .footer_categoris_box {

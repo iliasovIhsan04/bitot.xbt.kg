@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../assets/css/app.css";
-import "../assets/css/992.css";
 import logo from "../assets/img/bitokLogo.svg";
 import { NavLink } from "react-router-dom";
 import Language from "./Main/Language";

@@ -38,7 +38,7 @@ const Footer = () => {
                   <span>FAQ</span>
                   <span>Отзывы</span>
                 </div>
-                <div className="footer_categoris_box">
+                <div className="footer_categoris_box categories_box3">
                   <p>Политика</p>
                   <span>Политика конфиденциальности</span>
                   <span>Условия использования</span>

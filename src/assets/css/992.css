@@ -37,4 +37,33 @@
   .dollar_img::before {
     top: 420px;
   }
+  #faq .questions__all {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .news {
+    padding-bottom: 20px;
+  }
+  .footer_categoris {
+    grid-template-columns: 1.6fr 1fr;
+    margin-left: 40px;
+  }
+  .footer_box2 {
+    border: none;
+  }
+}
+@media (max-width: 860px) {
+  #faq .questions__faq p {
+    width: 73%;
+  }
+  .footer_block {
+    grid-template-columns: 1fr;
+  }
+  .footer_categoris {
+    margin: 40px 0 0 0;
+  }
+  .categories_box3 {
+    margin-top: 40px;
+    width: 100%;
+  }
 }

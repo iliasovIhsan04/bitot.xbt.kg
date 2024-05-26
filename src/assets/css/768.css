@@ -18,7 +18,8 @@
   }
   .popular-crypto-currencies,
   .our-team,
-  .news {
+  .news,
+  #faq .questions__all {
     margin: 100px 0 0 0;
   }
   .news h1 {
@@ -32,7 +33,10 @@
     left: 0;
   }
   .dollar_img::before {
-    top: 180px !important;
+    top: 115px !important;
+  }
+  .question-content {
+    font-size: 18px;
   }
 }
 @media (max-width: 668px) {
@@ -69,6 +73,4 @@
     display: flex;
     align-items: flex-start;
   }
-
- 
 }
