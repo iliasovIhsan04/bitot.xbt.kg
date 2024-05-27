@@ -38,6 +38,16 @@
   .question-content {
     font-size: 18px;
   }
+  #faq .btn {
+    display: none;
+  }
+  .btn-bottom {
+    display: block !important;
+    gap: 10px !important;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 235px;
+  }
 }
 @media (max-width: 668px) {
   .trade-btn,

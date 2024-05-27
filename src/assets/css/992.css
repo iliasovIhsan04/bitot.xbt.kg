@@ -51,19 +51,25 @@
   .footer_box2 {
     border: none;
   }
+  #faq .questions__faq p {
+    width: 33%;
+  }
+  .social_network_block {
+    margin: 40px 0 0 0;
+    justify-content: space-between;
+  }
 }
 @media (max-width: 860px) {
-  #faq .questions__faq p {
-    width: 73%;
-  }
   .footer_block {
     grid-template-columns: 1fr;
+  }
+  #faq .questions__faq p {
+    width: 73%;
   }
   .footer_categoris {
     margin: 40px 0 0 0;
   }
   .categories_box3 {
-    margin-top: 40px;
-    width: 100%;
+    margin: 40px 0 100px 0;
   }
 }

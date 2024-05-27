@@ -58,23 +58,15 @@ const Faq = () => {
       <div className="container">
         <div className="questions__all">
           <div className="questions__faq">
-              <div>
-                <h1>Ответы на часто задаваемые вопросы</h1>
-                <p>
-                  Прозрачные комиссии, наличие большие резервы и отличная
-                  репутация гарантируют успех ваших обменных операций!
-                </p>
+            <div>
+              <h1>Ответы на часто задаваемые вопросы</h1>
+              <p>
+                Прозрачные комиссии, наличие большие резервы и отличная
+                репутация гарантируют успех ваших обменных операций!
+              </p>
               <div className="question"></div>
             </div>
-            <button
-              onClick={() =>
-                setOne(true) ||
-                setTwo(false) ||
-                setDataFaq(accumulatedData[0]) ||
-                toggle()
-              }
-              className={one ? "btn btn-crypto-all" : "btn active"}
-            >
+            <button className={one ? "btn btn-crypto-all" : "btn active"}>
               Посмотреть все
               <MdArrowOutward />
             </button>
@@ -95,6 +87,12 @@ const Faq = () => {
             ) : (
               <div className="loading_fag">loading</div>
             )}
+            <button
+              className={one ? "btn-crypto-all btn-bottom" : "btn active"}
+            >
+              Посмотреть все
+              <MdArrowOutward />
+            </button>
           </div>
         </div>
       </div>

@@ -64,15 +64,27 @@
   }
   .question-content {
     font-size: 16px;
-    padding: 0 10px;
+    padding-right: 10px;
   }
   #faq .questions__faq h1 {
     font-size: 22px;
     line-height: 1.1;
+    width: 67%;
   }
   #faq .question::before {
     width: 100px;
     height: 100px;
+    top: 30px;
+  }
+  .footer_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .answer-content {
+    font-size: 14px;
+    line-height: 1.2;
   }
 }
 @media (max-width: 513px) {
@@ -81,7 +93,6 @@
   }
   .footer_categoris {
     grid-template-columns: 1fr 1fr;
-    margin-left: 40px;
   }
 }
 @media (max-width: 480px) {
@@ -91,6 +102,9 @@
   .reliability_position {
     left: 10px;
     height: 45px;
+  }
+  .footer_box1 a {
+    font-size: 34px;
   }
 }
 @media (max-width: 428px) {
@@ -113,7 +127,7 @@
     left: 160px !important;
   }
   .dollar_img::before {
-    top: 200px !important;
+    top: 190px !important;
   }
 }
 
