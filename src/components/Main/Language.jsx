@@ -69,6 +69,11 @@ const Language = () => {
         position: "relative",
         display: "flex",
         alignItems: "center",
+        "&:hover": {
+          width: "110px",
+          height: "45px",
+          opacity: "0.8",
+        },
       }}
       className="center"
     >
@@ -76,6 +81,12 @@ const Language = () => {
         aria-label="change langauge"
         size="small"
         color="#3698="
+        sx={{
+          width: "110px",
+          display: "flex",
+          borderRadius: "10px",
+          justifyContent: "space-between",
+        }}
         onClick={() => {
           document.body.classList.add("scrolled-body");
           setOpen(!open);
@@ -87,6 +98,7 @@ const Language = () => {
           style={{
             borderRadius: "50px",
             objectFit: "cover",
+            marginRight: "10px",
           }}
           alt=""
           src={i18n.resolvedLanguage === "en" ? en : ru}

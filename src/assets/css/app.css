@@ -805,7 +805,6 @@
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -816,12 +815,11 @@
   left: 0;
   width: 80%;
   height: 100vh;
-  background: #0a0a0b;
-  padding: 70px 20px;
+  background: #ffffff;
+  padding: 20px 20px;
   z-index: 999;
   animation: menuModal 0.5s ease;
 }
-
 @keyframes menuModal {
   0% {
     right: -200px;
@@ -831,8 +829,18 @@
   }
 }
 .close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: white;
+  color: #b5b5b5;
+  cursor: pointer;
+}
+.close-language-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.page-burger {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }

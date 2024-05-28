@@ -4,7 +4,7 @@ import logo from "../assets/img/bitokLogo.svg";
 import { NavLink } from "react-router-dom";
 import Language from "./Main/Language";
 import { t } from "i18next";
-import { IoCloseSharp } from "react-icons/io5";
+import close from "../assets/img/close_modal.svg";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -22,52 +22,29 @@ const Header = () => {
               <div className="menu">
                 <div onClick={() => setMenu(false)} className="menu_not"></div>
                 <div className="menu_container">
-                  <IoCloseSharp
-                    onClick={() => setMenu(false)}
-                    className="close"
-                  />
+                  <div className="close-language-block">
+                    <img
+                      onClick={() => setMenu(false)}
+                      className="close"
+                      src={close}
+                      alt=""
+                    />
+                    <div className="lan_bloc">
+                      <Language />
+                    </div>
+                  </div>
                   <NavLink
-                    onClick={() => setMenu(false)}
+                    className="page-burger"
                     to="/about"
-                    className="page"
-                  >
-                    О нас
-                  </NavLink>
-                  <NavLink
                     onClick={() => setMenu(false)}
-                    to="/projects"
-                    className="page"
                   >
-                    Проекты
+                    {t("about")}
                   </NavLink>
-                  {/* <NavLink onClick={() => setMenu(false)} to="/" className="page">Партнеры</NavLink> */}
-                  <NavLink
-                    onClick={() => setMenu(false)}
-                    to="/vacancy"
-                    className="page"
-                  >
-                    Вакансии
+                  <NavLink className="page-burger" to="/news">
+                    Новости
                   </NavLink>
-                  <NavLink
-                    onClick={() => setMenu(false)}
-                    to="/event"
-                    className="page"
-                  >
-                    Мероприятия
-                  </NavLink>
-                  <NavLink
-                    onClick={() => setMenu(false)}
-                    to="/review"
-                    className="page"
-                  >
-                    Отзывы
-                  </NavLink>
-                  <NavLink
-                    onClick={() => setMenu(false)}
-                    to="/contact"
-                    className="page"
-                  >
-                    Контакты
+                  <NavLink className="page-burger" to="/contacts">
+                    {t("contacts")}
                   </NavLink>
                 </div>
               </div>
