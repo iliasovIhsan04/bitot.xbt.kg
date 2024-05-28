@@ -775,3 +775,64 @@
   color: #fff;
   text-decoration: underline;
 }
+.burger {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1111;
+}
+.menu_not {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  background: rgba(124, 122, 122, 0.2);
+  backdrop-filter: blur(10px);
+  animation: focus 0.4s ease;
+}
+@keyframes focus {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.menu_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background: #0a0a0b;
+  padding: 70px 20px;
+  z-index: 999;
+  animation: menuModal 0.5s ease;
+}
+
+@keyframes menuModal {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0;
+  }
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
