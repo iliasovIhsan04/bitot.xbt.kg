@@ -48,6 +48,14 @@
     margin: 0 auto;
     margin-bottom: 235px;
   }
+  .bitok_icon {
+    display: none;
+  }
+  .bitok_icon_burger {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
 }
 @media (max-width: 668px) {
   .trade-btn,

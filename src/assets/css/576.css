@@ -19,13 +19,11 @@
     width: 30px;
     height: 30px;
   }
+  .crypto-select {
+    padding: 8px;
+  }
   .input_box {
     height: 80px;
-  }
-  .crypto-select {
-    min-width: 120px;
-    top: 14px;
-    gap: 8;
   }
   .calc-currency-text span {
     font-size: 14px;
@@ -85,6 +83,9 @@
   .answer-content {
     font-size: 14px;
     line-height: 1.2;
+  }
+  .news_title {
+    margin: 280px 0 35px 0;
   }
 }
 @media (max-width: 513px) {

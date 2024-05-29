@@ -1,16 +1,14 @@
 .select {
   position: absolute;
   top: 80px;
-  left: -250px;
+  left: 0;
   right: 0;
   width: 100%;
-  width: 408px;
   height: 200px;
   padding: 7px;
   background: #fff;
   box-shadow: 5px 10px 15px #0000007a;
-  overflow-x: hidden;
-  overflow: auto;
+  overflow: scroll;
   animation: selectAnimate 0.3s ease;
   z-index: 99999;
   border-bottom-left-radius: 10px;

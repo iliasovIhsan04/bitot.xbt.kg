@@ -187,12 +187,9 @@
   opacity: 0.8;
 }
 .crypto-select {
-  width: 145px;
+  height: 100%;
   background-color: #fff;
-  top: 8px;
-  right: 10px;
   cursor: pointer;
-  position: absolute;
   padding: 12px;
   text-align: center;
   display: flex;
@@ -236,31 +233,6 @@
   flex-direction: row;
   gap: 10px;
 }
-.slider-block {
-  margin: 90px 0 0 0;
-}
-.slider-index {
-  width: 100%;
-  height: 160px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: none !important;
-  background-color: blanchedalmond;
-  gap: 20px;
-}
-.slider-index img {
-  width: 100%;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
-  gap: 20px;
-}
-.slick-track {
-  display: flex !important;
-  gap: 20px;
-}
-
 /* PopularCrypto */
 .popular-crypto-currencies {
   margin: 200px 0 0 0;
@@ -843,4 +815,106 @@
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+}
+.page-burger:hover {
+  color: var(--blue);
+}
+.bitok_icon_burger {
+  display: none;
+}
+
+/*Slider  */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px !important;
+  @media screen and (max-width: 600px) {
+    margin-top: 15px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  width: 50px !important;
+  height: 8px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 38%) !important;
+  transition: 0.1s ease !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: white !important;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: black !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next,
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  background: #00000066 !important;
+  color: var(--white) !important;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out !important;
+  padding: 10px;
+  position: absolute !important;
+  bottom: 120px !important;
+  @media screen and (max-width: 600px) {
+    display: none !important;
+  }
+}
+
+.swiper-wrapper {
+  justify-content: space-between !important;
+}
+
+.mySwiperImg {
+  width: 100% !important;
+}
+
+.btn:hover {
+  background: var(--blue) !important;
+  color: var(--white) !important;
+}
+
+.popularIcon:hover {
+  color: var(--white) !important;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  font-size: 20px !important;
+  font-weight: 600;
+  color: #ffffff;
+}
+.swiper-button-next {
+  right: 20px !important;
+}
+.swiper-button-prev {
+  left: 20px !important;
 }

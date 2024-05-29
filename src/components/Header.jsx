@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assets/css/app.css";
 import logo from "../assets/img/bitokLogo.svg";
+import logo_burger from "../assets/img/logoBurger.svg";
 import { NavLink } from "react-router-dom";
 import Language from "./Main/Language";
 import { t } from "i18next";
@@ -51,6 +52,9 @@ const Header = () => {
             )}
             <NavLink to="/" className="bitok_icon">
               <img src={logo} alt="Logo" />
+            </NavLink>
+            <NavLink to="/" className="bitok_icon_burger">
+              <img src={logo_burger} alt="Logo" />
             </NavLink>
             <div className="link-block d-f-center">
               <NavLink className="nav_page" to="/about">

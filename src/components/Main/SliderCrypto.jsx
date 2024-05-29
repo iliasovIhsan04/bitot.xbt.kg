@@ -1,45 +1,46 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import slider1 from "../../assets/img/slider1.svg";
 import slider2 from "../../assets/img/slider2.svg";
 import slider3 from "../../assets/img/slider3.svg";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Navigation, Pagination, Keyboard } from "swiper/modules";
 
 const SliderCrypto = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    arrows: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   arrows: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplaySpeed: 3000,
+  //   pauseOnHover: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   const data = [
     {
@@ -68,15 +69,38 @@ const SliderCrypto = () => {
     },
   ];
   return (
-    <div className="slider-crypto">
+    <div style={{ width: "100%" }}>
       <div className="container">
-        <Slider className="slider-block" {...settings}>
-          {data.map((el, id) => (
-            <div className="slider-index" key={id}>
-              <img src={el.img} alt="" />
-            </div>
+        <Swiper
+          className="mySwiper"
+          slidesPerView={4}
+          spaceBetween={20}
+          keyboard={{ enabled: true }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Navigation, Pagination, Keyboard]}
+          style={{ width: "100%", marginTop: "100px" }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            904: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1224: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          {data?.map((item, index) => (
+            <SwiperSlide key={index} style={{ width: "100%" }}>
+              <img className="mySwiperImg" height={160} src={item.img} alt="" />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   );
