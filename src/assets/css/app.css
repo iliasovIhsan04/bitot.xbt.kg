@@ -84,6 +84,24 @@
   border-radius: 10px;
   max-width: 160px;
 }
+.for-sale-text {
+  position: relative;
+}
+.bitokkg-position {
+  position: absolute;
+  top: 35px;
+  left: 270px;
+  width: 128px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(195, 214, 255, 0.3);
+  backdrop-filter: blur(2px);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+}
 .conversion-calc {
   max-width: 448px;
   height: 100%;
@@ -116,6 +134,20 @@
 }
 .conversion-calc-really {
   padding: 0 20px 20px 20px;
+}
+.crypto_course {
+  max-width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.getting-block {
+  display: flex;
 }
 .conversion-buy-active {
   width: 100%;
@@ -282,13 +314,11 @@
 }
 
 /* OurTeam */
-
 .grid-mob {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 20px;
 }
-
 .our-team {
   width: 100%;
   margin-top: 270px;

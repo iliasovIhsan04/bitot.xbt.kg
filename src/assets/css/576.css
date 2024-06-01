@@ -87,6 +87,10 @@
   .news_title {
     margin: 280px 0 35px 0;
   }
+  .bitokkg-position {
+    top: 17px;
+    left: 160px;
+  }
 }
 @media (max-width: 513px) {
   .reliability_position {
@@ -131,7 +135,23 @@
     top: 190px !important;
   }
 }
-
+@media (max-width: 380px) {
+  .bitokkg-position {
+    top: 20px;
+    left: 160px;
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 360px) {
+  #faq .question::before {
+    left: 210px;
+    width: 80px;
+    height: 80px;
+  }
+}
 @media (max-width: 343px) {
   .license_position {
     left: 150px !important;

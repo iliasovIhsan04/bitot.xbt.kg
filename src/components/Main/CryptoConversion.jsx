@@ -72,7 +72,11 @@ const CryptoConversion = () => {
         <div className="conditions-conversion">
           <div>
             <h1>
-              Лучший сервис <br /> по продаже <br /> и покупке криптовалют
+              Лучший сервис <br />
+              <span className="for-sale-text">
+                по продаже <div className="bitokkg-position">🔥 Bitok.kg</div>
+              </span>
+              <br /> и покупке криптовалют
             </h1>
             <p>
               Ваш путь к свободе финансов и инновационным возможностям
@@ -154,8 +158,11 @@ const CryptoConversion = () => {
                     </div>
                   </div>
                   <div className="give-it-away-box">
-                    <label htmlFor="">
-                      Вы получаете:{course / selectedPrice}
+                    <label className="getting-block" htmlFor="">
+                      Вы получаете:
+                      <span className="crypto_course">
+                        {course / selectedPrice}
+                      </span>
                     </label>
                     <div className="input_box d-f-sb">
                       <input

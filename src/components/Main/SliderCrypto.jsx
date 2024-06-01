@@ -85,6 +85,10 @@ const SliderCrypto = () => {
               slidesPerView: 1,
               spaceBetween: 15,
             },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
             904: {
               slidesPerView: 3,
               spaceBetween: 20,
