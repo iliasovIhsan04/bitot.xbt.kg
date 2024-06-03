@@ -91,6 +91,9 @@
     top: 17px;
     left: 160px;
   }
+  .our-team-the-information-box {
+    min-height: 400px;
+  }
 }
 @media (max-width: 513px) {
   .reliability_position {
@@ -127,7 +130,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   .license_position {
     left: 160px !important;
   }
@@ -151,10 +154,13 @@
     width: 80px;
     height: 80px;
   }
+  .license_position {
+    left: 140px !important;
+  }
 }
 @media (max-width: 343px) {
   .license_position {
-    left: 150px !important;
+    left: 130px !important;
   }
   .reliability_position {
     top: 515px !important;

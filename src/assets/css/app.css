@@ -386,7 +386,7 @@
 }
 .information-back-img {
   width: 200px;
-  height: 200px;
+  height: 180px;
   margin: 0 auto;
   position: relative;
 }
@@ -933,20 +933,19 @@
     display: none !important;
   }
 }
-
 .swiper-wrapper {
   justify-content: space-between !important;
 }
-
 .mySwiperImg {
   width: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
 }
-
 .btn:hover {
   background: var(--blue) !important;
   color: var(--white) !important;
 }
-
 .popularIcon:hover {
   color: var(--white) !important;
 }
@@ -982,4 +981,7 @@
   background: var(--blue);
   margin: 100px 0 0 0;
   padding: 10px 30px;
+}
+.advantages .slick-dots {
+  display: none !important;
 }
