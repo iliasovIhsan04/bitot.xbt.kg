@@ -8,39 +8,39 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
 
 const SliderCrypto = () => {
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   arrows: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplaySpeed: 3000,
-  //   pauseOnHover: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   const data = [
     {
@@ -78,6 +78,7 @@ const SliderCrypto = () => {
           keyboard={{ enabled: true }}
           pagination={{ clickable: true }}
           navigation={true}
+          settings={settings}
           modules={[Navigation, Pagination, Keyboard]}
           style={{ width: "100%", marginTop: "100px" }}
           breakpoints={{

@@ -36,13 +36,20 @@ const Header = () => {
                   </div>
                   <NavLink
                     className="page-burger"
+                    to="/"
+                    onClick={() => setMenu(false)}
+                  >
+                    {t("home")}
+                  </NavLink>
+                  <NavLink
+                    className="page-burger"
                     to="/about"
                     onClick={() => setMenu(false)}
                   >
                     {t("about")}
                   </NavLink>
                   <NavLink className="page-burger" to="/news">
-                    Новости
+                    {t("news")}
                   </NavLink>
                   <NavLink className="page-burger" to="/contacts">
                     {t("contacts")}
@@ -57,11 +64,14 @@ const Header = () => {
               <img src={logo_burger} alt="Logo" />
             </NavLink>
             <div className="link-block d-f-center">
+              <NavLink className="nav_page" to="/">
+                {t("home")}
+              </NavLink>
               <NavLink className="nav_page" to="/about">
                 {t("about")}
               </NavLink>
               <NavLink className="nav_page" to="/news">
-                Новости
+                {t("news")}
               </NavLink>
               <NavLink className="nav_page" to="/contacts">
                 {t("contacts")}

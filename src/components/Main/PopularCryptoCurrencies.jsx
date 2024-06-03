@@ -54,11 +54,11 @@ const PopularCryptoCurrencies = () => {
                       enabled: false,
                     },
                   },
+
                   stroke: {
-                    curve: "smooth",
                     width: 3,
                     colors: el.difference.includes("-") ? ["red"] : ["#07A574"],
-                    opacity: 0.3,
+                    opacity: 0,
                   },
                   grid: {
                     xaxis: { lines: { show: false } },
@@ -68,6 +68,7 @@ const PopularCryptoCurrencies = () => {
                       },
                     },
                   },
+
                   dataLabels: { enabled: false },
                   legend: { show: false },
                   xaxis: { labels: { show: false } },

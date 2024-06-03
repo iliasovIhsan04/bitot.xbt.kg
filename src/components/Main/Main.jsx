@@ -8,6 +8,7 @@ import OurTeam from "./OurTeam";
 import News from "./News";
 import Faq from "./Faq";
 import Footer from "../Footer";
+import Advantages from "./Advantages";
 
 const Main = () => {
   return (
@@ -16,6 +17,7 @@ const Main = () => {
       <SliderCrypto />
       <PopularCryptoCurrencies />
       <OurTeam />
+      <Advantages />
       <News />
       <Faq />
       <Footer />

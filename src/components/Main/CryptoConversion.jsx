@@ -11,22 +11,29 @@ const CryptoConversion = () => {
   const [chekbox, setChekbox] = useState(false);
   const [chekboxOne, setChekboxOne] = useState(false);
   const [article, setArticle] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [fiatPrise, setFiatPrise] = useState(null);
-  const [selectedPrice, setSelectedPrice] = useState("");
-  const [selectedPriceChange, setSelectedPriceChange] = useState("");
-  const [selectedPriceOne, setSelectedPriceOne] = useState("");
-  const [selectedPriceOneChange, setSelectedPriceOneChange] = useState("");
   const [fiat, setFiat] = useState([]);
+  const [fiatGivenlar, setFiatGivenlar] = useState(null);
+  const [articleGivenlar, setArticleGivenlar] = useState(null);
+  const [selectedArticleRate, setSelectedArticleRate] = useState("");
+  const [selectedFiatRate, setSelectedFiatRate] = useState("");
+  const [sellAllBay, setSellAllBay] = useState(false);
+  const [fiatRate, setFiatRate] = useState("");
+  const [fiatChange, setFiatChange] = useState("");
+  const [articleChange, setArticleChange] = useState("");
+  const [selectedArticleChange, setSelectedArticleChange] = useState("");
+  const [selectedFiatChange, setSelectedFiatChange] = useState("");
   const handleBuyClick = () => {
     setBuy(true);
     setSel(false);
+    setSellAllBay(false);
   };
 
   const handleSellClick = () => {
     setBuy(false);
     setSel(true);
+    setSellAllBay(true);
   };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -41,10 +48,8 @@ const CryptoConversion = () => {
       const firstCurrency = Object.values(response.data.currencies).find(
         (currency) => currency.currency === "KGS"
       );
-      setFiatPrise(firstCurrency);
-      setSelectedPriceOne(firstCurrency.rate);
-
-      setSelectedPrice(firstCurrency.rate * firstCurrency.rate);
+      setFiatGivenlar(firstCurrency);
+      setSelectedFiatRate(firstCurrency.rate);
     } catch (error) {
       console.log("AxiosError:", error.message);
     }
@@ -55,17 +60,18 @@ const CryptoConversion = () => {
       const response = await axios.get(url + `/currencies`);
       setArticle(response.data.currencies);
       const firstCurrency = Object.values(response.data.currencies).find(
-        (currency) => currency.id === "1"
+        (currency) => currency.currency === "USDT"
       );
-      setSelectedItem(firstCurrency);
-      setSelectedPrice(firstCurrency.rate);
+      setArticleGivenlar(firstCurrency);
+      setSelectedArticleRate(firstCurrency.rate);
     } catch (error) {
       console.log("AxiosError:", error.message);
     }
   };
 
-  const course = selectedPriceOneChange / selectedPriceOne;
-
+  const course = selectedFiatChange / selectedFiatRate;
+  const priceFiat = articleChange * fiatRate;
+  console.log(priceFiat);
   return (
     <div className="container">
       <div className="crypto-conversion">
@@ -105,111 +111,215 @@ const CryptoConversion = () => {
                     Продать
                   </div>
                 </div>
-                <div className="give-it-away-block">
-                  <div className="give-it-away-box">
-                    <label htmlFor="">
-                      Вы отдаете:{setSelectedPriceOneChange}
-                    </label>
-                    <div className="input_box d-f-sb">
-                      <input
-                        placeholder="0.00"
-                        type="number"
-                        value={selectedPriceOneChange}
-                        onChange={(e) =>
-                          setSelectedPriceOneChange(e.target.value)
-                        }
-                      />
-                      <div
-                        className="crypto-select"
-                        onClick={() => setChekboxOne(!chekboxOne)}
-                      >
-                        {fiatPrise && (
-                          <div className="selected-item">
-                            <img src={fiatPrise.logo} alt="" />
-                            <div className="calc-currency-text">
-                              <b>{fiatPrise.currency}</b>
-                              <span>{fiatPrise.name}</span>
+                {sellAllBay === false ? (
+                  <div className="give-it-away-block">
+                    <div className="give-it-away-box">
+                      <label htmlFor="">Вы отдаете:{selectedFiatChange}</label>
+                      <div className="input_box d-f-sb">
+                        <input
+                          placeholder="0.00"
+                          type="number"
+                          value={selectedFiatChange}
+                          onChange={(e) =>
+                            setSelectedFiatChange(e.target.value)
+                          }
+                        />
+                        <div
+                          className="crypto-select"
+                          onClick={() => setChekboxOne(!chekboxOne)}
+                        >
+                          {fiatGivenlar && (
+                            <div className="selected-item">
+                              <img src={fiatGivenlar.logo} alt="" />
+                              <div className="calc-currency-text">
+                                <b>{fiatGivenlar.currency}</b>
+                                <span>{fiatGivenlar.name}</span>
+                              </div>
+                              <RiArrowDownSLine size={25} color={"#000"} />
                             </div>
-                            <RiArrowDownSLine size={25} color={"#000"} />
-                          </div>
-                        )}
-                        {chekboxOne && (
-                          <Selects>
-                            {fiat &&
-                              Object.values(fiat)?.map((el) => (
-                                <div
-                                  className="bitkoint"
-                                  onClick={() => {
-                                    setFiatPrise(el);
-                                    setSelectedPriceOne(el.rate);
-                                    setChekboxOne(false);
-                                  }}
-                                >
-                                  <img src={el.logo} alt="" />
-                                  <div className="calc-currency-text ">
-                                    <b>{el.currency}</b>
-                                    <span>{el.name}</span>
+                          )}
+                          {chekboxOne && (
+                            <Selects>
+                              {fiat &&
+                                Object.values(fiat)?.map((el) => (
+                                  <div
+                                    className="bitkoint"
+                                    onClick={() => {
+                                      setFiatGivenlar(el);
+                                      setSelectedFiatRate(el.rate);
+                                      setChekboxOne(false);
+                                    }}
+                                  >
+                                    <img src={el.logo} alt="" />
+                                    <div className="calc-currency-text">
+                                      <b>{el.currency}</b>
+                                      <span>{el.name}</span>
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
-                          </Selects>
-                        )}
+                                ))}
+                            </Selects>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="give-it-away-box">
+                      <label className="getting-block" htmlFor="">
+                        Вы получаете:
+                        <span className="crypto_course">
+                          {course / selectedArticleRate}
+                        </span>
+                      </label>
+                      <div className="input_box d-f-sb">
+                        <input
+                          placeholder="0.00"
+                          type="number"
+                          value={course / selectedArticleRate}
+                          onChange={(e) =>
+                            setSelectedArticleChange(e.target.value)
+                          }
+                        />
+                        <div
+                          className="crypto-select"
+                          onClick={() => setChekbox(!chekbox)}
+                        >
+                          {articleGivenlar && (
+                            <div className="selected-item">
+                              <img src={articleGivenlar.logo} alt="" />
+                              <div className="calc-currency-text">
+                                <b>{articleGivenlar.currency}</b>
+                                <span>{articleGivenlar.name}</span>
+                              </div>
+                              <RiArrowDownSLine size={25} color={"#000"} />
+                            </div>
+                          )}
+                          {chekbox && (
+                            <Selects>
+                              {article &&
+                                Object.values(article)?.map((el) => (
+                                  <div
+                                    className="bitkoint"
+                                    onClick={() => {
+                                      setArticleGivenlar(el);
+                                      setSelectedArticleRate(el.rate);
+                                      setChekbox(false);
+                                    }}
+                                  >
+                                    <img src={el.logo} alt="" />
+                                    <div className="calc-currency-text">
+                                      <b>{el.currency}</b>
+                                      <span>{el.name}</span>
+                                    </div>
+                                  </div>
+                                ))}
+                            </Selects>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="give-it-away-box">
-                    <label className="getting-block" htmlFor="">
-                      Вы получаете:
-                      <span className="crypto_course">
-                        {course / selectedPrice}
-                      </span>
-                    </label>
-                    <div className="input_box d-f-sb">
-                      <input
-                        placeholder="0.00"
-                        type="number"
-                        value={course / selectedPrice}
-                        onChange={(e) => setSelectedPriceChange(e.target.value)}
-                      />
-                      <div
-                        className="crypto-select"
-                        onClick={() => setChekbox(!chekbox)}
-                      >
-                        {selectedItem && (
-                          <div className="selected-item">
-                            <img src={selectedItem.logo} alt="" />
-                            <div className="calc-currency-text">
-                              <b>{selectedItem.currency}</b>
-                              <span>{selectedItem.name}</span>
+                ) : (
+                  <div className="give-it-away-block">
+                    <div className="give-it-away-box">
+                      <label htmlFor="">Вы отдаете:{articleChange}</label>
+                      <div className="input_box d-f-sb">
+                        <input
+                          placeholder="0.00"
+                          type="number"
+                          value={articleChange}
+                          onChange={(e) => setArticleChange(e.target.value)}
+                        />
+                        <div
+                          className="crypto-select"
+                          onClick={() => setChekbox(!chekbox)}
+                        >
+                          {articleGivenlar && (
+                            <div className="selected-item">
+                              <img src={articleGivenlar.logo} alt="" />
+                              <div className="calc-currency-text">
+                                <b>{articleGivenlar.currency}</b>
+                                <span>{articleGivenlar.name}</span>
+                              </div>
+                              <RiArrowDownSLine size={25} color={"#000"} />
                             </div>
-                            <RiArrowDownSLine size={25} color={"#000"} />
-                          </div>
-                        )}
-                        {chekbox && (
-                          <Selects>
-                            {article &&
-                              Object.values(article)?.map((el) => (
-                                <div
-                                  className="bitkoint"
-                                  onClick={() => {
-                                    setSelectedItem(el);
-                                    setSelectedPrice(el.rate);
-                                    setChekbox(false);
-                                  }}
-                                >
-                                  <img src={el.logo} alt="" />
-                                  <div className="calc-currency-text ">
-                                    <b>{el.currency}</b>
-                                    <span>{el.name}</span>
+                          )}
+                          {chekbox && (
+                            <Selects>
+                              {article &&
+                                Object.values(article)?.map((el) => (
+                                  <div
+                                    className="bitkoint"
+                                    onClick={() => {
+                                      setArticleGivenlar(el);
+                                      setSelectedArticleRate(el.rate);
+                                      setChekbox(false);
+                                    }}
+                                  >
+                                    <img src={el.logo} alt="" />
+                                    <div className="calc-currency-text">
+                                      <b>{el.currency}</b>
+                                      <span>{el.name}</span>
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
-                          </Selects>
-                        )}
+                                ))}
+                            </Selects>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="give-it-away-box">
+                      <label className="getting-block" htmlFor="">
+                        Вы получаете:
+                        <span className="crypto_course">
+                          {priceFiat / selectedArticleRate}
+                        </span>
+                      </label>
+                      <div className="input_box d-f-sb">
+                        <input
+                          placeholder="0.00"
+                          type="number"
+                          value={priceFiat / selectedArticleRate}
+                          onChange={(e) => setFiatChange(e.target.value)}
+                        />
+                        <div
+                          className="crypto-select"
+                          onClick={() => setChekboxOne(!chekboxOne)}
+                        >
+                          {fiatGivenlar && (
+                            <div className="selected-item">
+                              <img src={fiatGivenlar.logo} alt="" />
+                              <div className="calc-currency-text">
+                                <b>{fiatGivenlar.currency}</b>
+                                <span>{fiatGivenlar.name}</span>
+                              </div>
+                              <RiArrowDownSLine size={25} color={"#000"} />
+                            </div>
+                          )}
+                          {chekboxOne && (
+                            <Selects>
+                              {fiat &&
+                                Object.values(fiat)?.map((el) => (
+                                  <div
+                                    className="bitkoint"
+                                    onClick={() => {
+                                      setFiatGivenlar(el);
+                                      setFiatRate(el.rate);
+                                      setChekboxOne(false);
+                                    }}
+                                  >
+                                    <img src={el.logo} alt="" />
+                                    <div className="calc-currency-text">
+                                      <b>{el.currency}</b>
+                                      <span>{el.name}</span>
+                                    </div>
+                                  </div>
+                                ))}
+                            </Selects>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
             <button className="buy-btn">Купить сейчас</button>

@@ -11,6 +11,7 @@ i18n
     resources: {
       ru: {
         translation: {
+          home: "Главная",
           about: "О компании",
           servis: "Лучший сервис по продаже и покупке криптовалют",
           partner: "Партнёрам",
@@ -21,7 +22,8 @@ i18n
           change: "navis change в цифрах",
           dataInput: "ВВОД ДАННЫХ",
           get: "ПОЛУЧАЕТЕ",
-          yourPath: "Ваш путь к свободе финансов и инновационным возможностям начинается здесь и сейчас.",
+          yourPath:
+            "Ваш путь к свободе финансов и инновационным возможностям начинается здесь и сейчас.",
           welcome: "Добро пожаловать в мир криптовалюты!",
           reviews: "отзывы",
           floatingRate: "Плавающий курс",
@@ -42,19 +44,22 @@ i18n
           action: "Действие",
           trade: "Торговля",
           startTrading: "Начать торговлю",
-          cryptoExperts: "Мы - ведущая компания в сфере криптовалют, с глубокими знаниями и опытом",
-          ourCompany: "Наша компания воплощает в себе инновационные подходы и передовые технологии",
+          cryptoExperts:
+            "Мы - ведущая компания в сфере криптовалют, с глубокими знаниями и опытом",
+          ourCompany:
+            "Наша компания воплощает в себе инновационные подходы и передовые технологии",
           certificate: "Сертификат, лицензия и надежность",
           transparent: "Прозрачные коммиссии, эффективная система платежей",
           security: "Безопасность, защита финансовых данных",
           ourMission: "Наша миссия - сделать цифровые ",
           finance: "финансы",
-          accessible: "доступными и удобными"
+          accessible: "доступными и удобными",
         },
       },
 
       en: {
         translation: {
+          home: "Home",
           about: "About company",
           servis: "Best sales service and buying cryptocurrencies",
           partner: "Partners",
@@ -65,7 +70,8 @@ i18n
           change: "navis change in numbers",
           dataInput: "DATA INPUT",
           get: "YOU GET",
-          yourPath: "Your path to financial freedom and innovative opportunities begins here and now.",
+          yourPath:
+            "Your path to financial freedom and innovative opportunities begins here and now.",
           welcome: "Welcome to the world of cryptocurrency!",
           reviews: "reviews",
           floatingRate: "Floating rate",
@@ -86,14 +92,16 @@ i18n
           action: "Action",
           trade: "Trade",
           startTrading: "Start trading",
-          cryptoExperts: "We are a leading cryptocurrency company with deep knowledge and experience",
-          ourCompany: "Our company embodies innovative approaches and advanced technologies",
+          cryptoExperts:
+            "We are a leading cryptocurrency company with deep knowledge and experience",
+          ourCompany:
+            "Our company embodies innovative approaches and advanced technologies",
           certificate: "Certificate, license and reliability",
           transparent: "Transparent commissions, efficient payment system",
           security: "Security, financial data protection",
           ourMission: "Our mission is to make digital",
           finance: "finance",
-          accessible: "accessible and convenient"
+          accessible: "accessible and convenient",
         },
       },
     },

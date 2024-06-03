@@ -8,12 +8,23 @@
   color: #131313;
   position: relative;
 }
+.nav_page.active::before {
+  content: "";
+  position: absolute;
+  background: var(--blue);
+  height: 3px;
+  left: 0;
+  width: 100%;
+  bottom: -10px;
+  transition: 0.3s;
+}
 .nav_page::after {
   content: "";
   position: absolute;
   background: var(--blue);
   height: 3px;
   left: 0;
+  width: 0;
   bottom: -10px;
   transition: 0.3s;
 }
@@ -144,7 +155,7 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
 }
 .getting-block {
   display: flex;
@@ -780,7 +791,6 @@
 .burger {
   display: none;
 }
-
 .menu {
   position: fixed;
   top: 0;
@@ -834,6 +844,9 @@
   color: #b5b5b5;
   cursor: pointer;
 }
+.close:hover {
+  color: #000;
+}
 .close-language-block {
   display: flex;
   align-items: center;
@@ -848,6 +861,10 @@
 }
 .page-burger:hover {
   color: var(--blue);
+}
+.page-burger.active {
+  color: var(--blue);
+  font-weight: 600;
 }
 .bitok_icon_burger {
   display: none;
@@ -947,4 +964,22 @@
 }
 .swiper-button-prev {
   left: 20px !important;
+}
+
+.apexcharts-inner line {
+  position: relative;
+  display: none !important;
+}
+.advantages img {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  width: auto;
+}
+.slider-auto-play {
+  background: var(--blue);
+  margin: 100px 0 0 0;
+  padding: 10px 30px;
 }
