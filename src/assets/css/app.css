@@ -976,6 +976,7 @@
   object-fit: cover;
   object-position: center;
   width: auto;
+  padding: 5px;
 }
 .slider-auto-play {
   background: var(--blue);
