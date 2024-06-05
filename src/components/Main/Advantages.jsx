@@ -39,10 +39,11 @@ const Advantages = () => {
         },
       },
       {
-        breakpoint: 414,
+        breakpoint: 500,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],

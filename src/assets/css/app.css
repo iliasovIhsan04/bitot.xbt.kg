@@ -153,7 +153,6 @@
   color: #000;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
@@ -983,6 +982,8 @@
   margin: 100px 0 0 0;
   padding: 10px 30px;
 }
+
+
 .advantages .slick-dots {
   display: none !important;
 }

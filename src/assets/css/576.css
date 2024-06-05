@@ -24,6 +24,7 @@
   }
   .input_box {
     height: 80px;
+    gap: 0px !important;
   }
   .calc-currency-text span {
     font-size: 14px;

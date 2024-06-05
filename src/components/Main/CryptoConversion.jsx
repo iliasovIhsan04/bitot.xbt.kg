@@ -114,7 +114,12 @@ const CryptoConversion = () => {
                 {sellAllBay === false ? (
                   <div className="give-it-away-block">
                     <div className="give-it-away-box">
-                      <label htmlFor="">Вы отдаете:{selectedFiatChange}</label>
+                      <label className="getting-block" htmlFor="">
+                        Вы отдаете:
+                        <span className="crypto_course">
+                          {selectedFiatChange}
+                        </span>
+                      </label>
                       <div className="input_box d-f-sb">
                         <input
                           placeholder="0.00"
