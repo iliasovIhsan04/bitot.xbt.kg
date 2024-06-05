@@ -43,15 +43,24 @@ const Header = () => {
                   </NavLink>
                   <NavLink
                     className="page-burger"
-                    to="/about"
+                    to="/about-company"
                     onClick={() => setMenu(false)}
                   >
                     {t("about")}
                   </NavLink>
-                  <NavLink className="page-burger" to="/news">
+
+                  <NavLink
+                    className="page-burger"
+                    to="/news"
+                    onClick={() => setMenu(false)}
+                  >
                     {t("news")}
                   </NavLink>
-                  <NavLink className="page-burger" to="/contacts">
+                  <NavLink
+                    className="page-burger"
+                    to="/contacts"
+                    onClick={() => setMenu(false)}
+                  >
                     {t("contacts")}
                   </NavLink>
                 </div>
@@ -67,7 +76,7 @@ const Header = () => {
               <NavLink className="nav_page" to="/">
                 {t("home")}
               </NavLink>
-              <NavLink className="nav_page" to="/about">
+              <NavLink className="nav_page" to="/about-company">
                 {t("about")}
               </NavLink>
               <NavLink className="nav_page" to="/news">

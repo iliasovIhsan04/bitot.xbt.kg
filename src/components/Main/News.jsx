@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { MdArrowOutward } from "react-icons/md";
 import { url } from "../../Api";
+import Loading from "../../UI/Select/Loading/Loading";
 
 const News = () => {
   const [stay, setStay] = useState([]);
@@ -31,21 +32,26 @@ const News = () => {
             <br /> и удобными
           </h1>
           <div className="dollar_img"></div>
-
           <h3 className="news_title">Новости</h3>
-          <div className="grid-mob">
-            {data.map((el) => (
-              <div className="news_box">
-                <div className="news_box_img">
-                  <img src={el.photo} alt="" />
+          {data[0] ? (
+            <div className="grid-mob">
+              {data.map((el) => (
+                <div className="news_box">
+                  <div className="news_box_img">
+                    <img src={el.photo} alt="" />
+                  </div>
+                  <div className="news_name_body">
+                    <h4>{el.name}</h4>
+                    <p>{el.body}</p>
+                  </div>
                 </div>
-                <div className="news_name_body">
-                  <h4>{el.name}</h4>
-                  <p>{el.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="loading-block d-f-center">
+              <Loading />
+            </div>
+          )}
           <button className="news_btn btn-crypto-all">
             Все новости <MdArrowOutward />
           </button>

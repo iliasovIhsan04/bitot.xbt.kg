@@ -3,14 +3,13 @@ import axios from "axios";
 import { MdArrowOutward } from "react-icons/md";
 import { url } from "../../Api";
 import FaqAccordion from "./FaqAccordion";
+import Loading from "../../UI/Select/Loading/Loading";
 
 const Faq = () => {
-  const [selected, setSelected] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
   const [dataFaq, setDataFaq] = useState([]);
   const [faq, setFaq] = useState([]);
   const [one, setOne] = useState(true);
-  const [two, setTwo] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,12 +43,6 @@ const Faq = () => {
     if (one) setDataFaq(accumulatedData[0]);
   });
 
-  const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
-    }
-    setSelected(i);
-  };
   const handleItemClick = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
@@ -85,7 +78,9 @@ const Faq = () => {
                 );
               })
             ) : (
-              <div className="loading_fag">loading</div>
+              <div className="loading-block d-f-center">
+                <Loading />
+              </div>
             )}
             <button
               className={one ? "btn-crypto-all btn-bottom" : "btn active"}

@@ -95,6 +95,9 @@
   .our-team-the-information-box {
     min-height: 400px;
   }
+  .start-trading-btn {
+    margin-top: 30px !important;
+  }
 }
 @media (max-width: 513px) {
   .reliability_position {

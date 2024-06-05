@@ -44,7 +44,7 @@
   .btn-bottom {
     display: block !important;
     gap: 10px !important;
-    margin: 0 auto;
+    margin: 30px auto;
     margin-bottom: 235px;
     padding: 10px 20px;
     display: flex !important;
@@ -99,5 +99,9 @@
   .our-team-box {
     display: flex;
     align-items: flex-start;
+  }
+  .page-not-found {
+    font-size: 20px;
+    text-align: center;
   }
 }
