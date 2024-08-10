@@ -77,7 +77,6 @@ const Advantages = () => {
           </div>
         </Slider>
       </div>
-      <div className="shadow" />
     </div>
   );
 };

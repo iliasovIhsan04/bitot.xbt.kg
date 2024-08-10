@@ -48,7 +48,6 @@ const Header = () => {
                   >
                     {t("about")}
                   </NavLink>
-
                   <NavLink
                     className="page-burger"
                     to="/news"

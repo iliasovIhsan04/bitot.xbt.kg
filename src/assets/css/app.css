@@ -869,7 +869,7 @@
 }
 
 /*Slider  */
-.swiper-pagination-fraction,
+/* .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -880,7 +880,6 @@
   z-index: 999;
   position: relative;
 }
-
 .swiper-pagination-bullet {
   width: 8px !important;
   height: 8px !important;
@@ -891,7 +890,6 @@
     margin-top: 15px !important;
   }
 }
-
 .swiper-pagination-bullet-active {
   width: 50px !important;
   height: 8px !important;
@@ -961,7 +959,7 @@
 }
 .swiper-button-prev {
   left: 20px !important;
-}
+} */
 
 .apexcharts-inner line {
   position: relative;
